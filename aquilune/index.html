@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Aquilune - A small hotel above a glowing cove</title>
+  <meta name="description" content="Aquilune is a concept website for a fictional boutique hotel: twelve rooms, one long table and a cove that glows at night. Scroll the story, then book a night." />
+  <meta name="theme-color" content="#050a12" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050a12'/%3E%3Cpath d='M20 50V30a12 12 0 0 1 24 0v20z' fill='none' stroke='%2362f3e3' stroke-width='3'/%3E%3Ccircle cx='32' cy='34' r='4' fill='%23ffbd6b'/%3E%3C/svg%3E" />
+  <script type="module" crossorigin src="./assets/index-C0p1wDq8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ZLa7NzkT.css">
+</head>
+<body>
+  <div id="preloader" aria-hidden="true">
+    <div class="pre-mark display"><span>A</span><span>q</span><span>u</span><span>i</span><span>l</span><span>u</span><span>n</span><span>e</span></div>
+    <div class="pre-line"><i></i></div>
+  </div>
+
+  <header id="site-header" class="site-header">
+    <a class="brand" href="#hero" id="brand" aria-label="Aquilune, back to top">
+      <svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><path d="M5 25V13a9 9 0 0 1 18 0v12z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="16" r="2.6" fill="currentColor"/></svg>
+      <span class="display">Aquilune</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#story" id="nav-story" data-nav><span>Story</span></a>
+      <a href="#rooms" id="nav-rooms" data-nav><span>Rooms</span></a>
+      <a href="#rituals" id="nav-rituals" data-nav><span>The day</span></a>
+      <a href="#cove" id="nav-cove" data-nav><span>The cove</span></a>
+    </nav>
+    <div class="header-right">
+      <div class="glow-meter" id="glow-meter" title="Tonight's bioluminescence, from the moon's phase">
+        <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.55"/><circle id="glow-dot" cx="10" cy="10" r="3.4" fill="currentColor"/></svg>
+        <span class="mono" id="glow-text">Glow tonight</span>
+      </div>
+      <button id="nav-reserve" class="btn btn-pill" type="button" data-reserve><span>Reserve</span></button>
+    </div>
+  </header>
+
+  <div id="world" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main id="site">
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero" aria-label="Aquilune">
+      <div class="hero-inner">
+        <p class="eyebrow mono" data-hero-in>A small hotel above a glowing cove</p>
+        <h1 id="hero-title" class="display hero-title" aria-label="Aquilune">Aquilune</h1>
+        <div class="hero-foot">
+          <p class="hero-lede" data-hero-in>Twelve rooms stacked down a limestone hillside, one long table, and a sea that lights up when you touch it.</p>
+          <div class="hero-actions" data-hero-in>
+            <button id="cta-reserve" class="btn btn-solid" type="button" data-reserve><span>Reserve a night</span><i class="arrow" aria-hidden="true"></i></button>
+            <a id="cta-story" class="btn btn-ghost" href="#story"><span>Read the story</span></a>
+          </div>
+        </div>
+        <div class="scroll-cue mono" data-hero-in aria-hidden="true"><i></i><span>Scroll &mdash; the day is ending</span></div>
+        <div class="hero-meta mono" data-hero-in aria-hidden="true">
+          <span>Est. for the long evenings</span><span>Open all year</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORY ================= -->
+    <section id="story" class="story" aria-label="The story">
+      <div class="story-sticky">
+        <div class="story-clock mono" aria-hidden="true"><span id="story-clock">18:42</span><i></i><span>Local time</span></div>
+        <div class="story-dots" aria-hidden="true"><b></b><b></b><b></b></div>
+
+        <article class="chapter chapter--left" id="chapter-1">
+          <div class="chap-in"><p class="chap-no mono">I &mdash; Arrival</p>
+          <h2 class="display chap-title">At the end of the last road, the coast folds in on itself.</h2>
+          <p class="chap-body">Aquilune is twelve rooms stacked down a limestone hillside, all facing west. Nobody built it in a hurry, and nobody will ask you to leave in one.</p></div>
+        </article>
+        <article class="chapter chapter--mid" id="chapter-2">
+          <div class="chap-in"><p class="chap-no mono">II &mdash; Dusk</p>
+          <h2 class="display chap-title">When the sun goes, <em>the house wakes.</em></h2>
+          <p class="chap-body">Lamps are lit by hand, one window at a time. Dinner is a single long table: one menu, whatever the boats brought in, and somebody to pour.</p></div>
+        </article>
+        <article class="chapter chapter--left" id="chapter-3">
+          <div class="chap-in"><p class="chap-no mono">III &mdash; Night</p>
+          <h2 class="display chap-title">Then the water <em>answers.</em></h2>
+          <p class="chap-body">Some nights the cove glows, a living blue that follows a hand, an oar, a swimmer. We call them glow nights. You can book them.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= ROOMS ================= -->
+    <section id="rooms" class="rooms" aria-label="Rooms">
+      <div class="rooms-head">
+        <div>
+          <p class="mono kicker">The rooms</p>
+          <h2 class="display rooms-title">Twelve rooms.<br /><em>Four ways</em> to wake&nbsp;up.</h2>
+        </div>
+        <p class="rooms-intro">Every room is drawn around a single view. Pick the one you will still be thinking about in March.</p>
+      </div>
+      <div class="rooms-grid" id="rooms-grid"></div>
+    </section>
+
+    <!-- ================= RITUALS ================= -->
+    <section id="rituals" class="rituals" aria-label="A day at Aquilune">
+      <div class="rituals-pin">
+        <div class="rituals-head">
+          <p class="mono kicker">A day, as we keep it</p>
+          <h2 class="display rituals-title">Five hours that <em>matter.</em></h2>
+        </div>
+        <div class="rituals-track" id="rituals-track"></div>
+        <div class="rituals-rail" aria-hidden="true">
+          <div class="rail-line"><i id="rail-fill"></i></div>
+          <span class="mono" id="rail-time">06:40</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COVE ================= -->
+    <section id="cove" class="cove" aria-label="The cove">
+      <canvas id="cove-canvas" aria-hidden="true"></canvas>
+      <div class="cove-copy">
+        <p class="mono kicker">Glow nights</p>
+        <h2 class="display cove-title">Touch <br /><em>the water.</em></h2>
+        <p class="cove-body">On the darkest nights, around the new moon, the plankton in the cove lights up when it is disturbed. Drag a hand through it. Watch it follow.</p>
+        <div class="cove-readout">
+          <span class="mono">Tonight</span>
+          <strong id="cove-glow">&mdash;</strong>
+          <span class="mono" id="cove-phase">&mdash;</span>
+        </div>
+      </div>
+      <p class="cove-hint mono" aria-hidden="true"><i></i>Move through the cove</p>
+    </section>
+
+    <!-- ================= FINALE ================= -->
+    <section id="finale" class="finale" aria-label="Reserve">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="display">Twelve rooms</span><i></i><span class="display"><em>one table</em></span><i></i><span class="display">a sea that answers</span><i></i>
+          <span class="display">Twelve rooms</span><i></i><span class="display"><em>one table</em></span><i></i><span class="display">a sea that answers</span><i></i>
+        </div>
+      </div>
+      <div class="finale-inner">
+        <h2 class="display finale-title">Stay <br />a <em>night.</em></h2>
+        <button id="book-cta" class="orb" type="button" data-reserve aria-label="Reserve a night">
+          <svg class="orb-ring" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="orb-path" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0" /></defs>
+            <text><textPath href="#orb-path" startOffset="0">Reserve &middot; Reserve &middot; Reserve &middot; Reserve &middot; Reserve &middot; </textPath></text>
+          </svg>
+          <span class="orb-label display">Book</span>
+        </button>
+      </div>
+      <div class="finale-info">
+        <div><b class="mono">Arrive</b><p>By boat from the harbour, eleven minutes. Or by the last road, if you are brave.</p></div>
+        <div><b class="mono">Check in</b><p>From 4 pm. The first lamp is lit at dusk, and there is always bread.</p></div>
+        <div><b class="mono">Season</b><p>Open all year. Glow nights cluster around the new moon, so book those early.</p></div>
+      </div>
+      <footer class="foot">
+        <div><p class="display foot-brand">Aquilune</p><p class="foot-small">Twelve rooms above a glowing cove.</p></div>
+        <div class="foot-note mono">A concept project for a fictional brand. The hotel, the place and the prices do not exist, and nothing you book here is real. Designed and built as a portfolio piece.</div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ================= BOOKING ================= -->
+  <div id="booking" class="booking" role="dialog" aria-modal="true" aria-labelledby="bk-title" hidden data-lenis-prevent>
+    <div class="bk-grain" aria-hidden="true"></div>
+    <div class="bk-shell" id="bk-shell">
+      <header class="bk-top">
+        <div class="bk-brand display">Aquilune</div>
+        <ol class="stepper" id="stepper" aria-label="Booking steps">
+          <li data-step="1" id="st-1"><span class="mono">01</span><b>Dates</b></li>
+          <li data-step="2" id="st-2"><span class="mono">02</span><b>Stay</b></li>
+          <li data-step="3" id="st-3"><span class="mono">03</span><b>You</b></li>
+          <li data-step="4" id="st-4"><span class="mono">04</span><b>Confirm</b></li>
+          <i class="pill" id="stepper-pill" aria-hidden="true"></i>
+        </ol>
+        <button id="booking-close" class="bk-close" type="button" aria-label="Close booking"><span>Close</span><i aria-hidden="true"></i></button>
+      </header>
+
+      <div class="bk-body">
+        <div class="bk-main">
+          <div class="step-wrap" id="step-wrap">
+            <!-- STEP 1 -->
+            <section class="step" id="step-1" data-step="1" aria-labelledby="bk-title">
+              <p class="mono kicker">Step one</p>
+              <h2 class="display step-title" id="bk-title">When will you <em>arrive?</em></h2>
+              <p class="step-sub">Two nights minimum. <span class="glow-key"><i></i>Glow night</span> marks dark skies and the brightest water, at a 15% supplement.</p>
+              <div class="cal" id="calendar">
+                <div class="cal-nav">
+                  <button id="cal-prev" type="button" aria-label="Previous months"><i></i></button>
+                  <button id="cal-next" type="button" aria-label="Next months"><i></i></button>
+                </div>
+                <div class="cal-months" id="cal-months"></div>
+              </div>
+              <div class="range-readout" id="range-readout" aria-live="polite">
+                <div><span class="mono">Arrive</span><strong id="ro-in">&mdash;</strong></div>
+                <i class="ro-arrow" aria-hidden="true"></i>
+                <div><span class="mono">Depart</span><strong id="ro-out">&mdash;</strong></div>
+                <div class="ro-nights"><span class="mono">Nights</span><strong id="ro-nights">&mdash;</strong></div>
+              </div>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="step" id="step-2" data-step="2" hidden aria-labelledby="t2">
+              <p class="mono kicker">Step two</p>
+              <h2 class="display step-title" id="t2">Who is coming, and <em>where</em> do they sleep?</h2>
+              <div class="guests">
+                <div class="counter" id="ctr-adults">
+                  <div class="ctr-label"><strong>Adults</strong><span>Over 12</span></div>
+                  <div class="ctr-ctl">
+                    <button id="adults-minus" type="button" aria-label="Fewer adults"><i></i></button>
+                    <output id="adults-val" class="display" aria-live="polite">2</output>
+                    <button id="adults-plus" type="button" aria-label="More adults"><i></i></button>
+                  </div>
+                </div>
+                <div class="counter" id="ctr-children">
+                  <div class="ctr-label"><strong>Children</strong><span>Under 12, our guests</span></div>
+                  <div class="ctr-ctl">
+                    <button id="children-minus" type="button" aria-label="Fewer children"><i></i></button>
+                    <output id="children-val" class="display" aria-live="polite">0</output>
+                    <button id="children-plus" type="button" aria-label="More children"><i></i></button>
+                  </div>
+                </div>
+                <div class="figures" id="figures" aria-hidden="true"></div>
+              </div>
+              <h3 class="sub-h mono">Your room</h3>
+              <div class="room-picker" id="room-picker" role="radiogroup" aria-label="Choose a room"></div>
+              <h3 class="sub-h mono">Little extras</h3>
+              <div class="addons" id="addons"></div>
+            </section>
+
+            <!-- STEP 3 -->
+            <section class="step" id="step-3" data-step="3" hidden aria-labelledby="t3">
+              <p class="mono kicker">Step three</p>
+              <h2 class="display step-title" id="t3">Who should we <em>set a place</em> for?</h2>
+              <form class="form" id="details-form" novalidate autocomplete="off">
+                <div class="field" data-field="name">
+                  <input id="guest-name" name="name" type="text" placeholder=" " autocomplete="off" required />
+                  <label for="guest-name">Full name</label>
+                  <span class="f-state" aria-hidden="true"></span>
+                  <p class="f-msg" id="msg-name" role="status"></p>
+                </div>
+                <div class="field" data-field="email">
+                  <input id="guest-email" name="email" type="email" placeholder=" " autocomplete="off" required />
+                  <label for="guest-email">Email for your confirmation</label>
+                  <span class="f-state" aria-hidden="true"></span>
+                  <p class="f-msg" id="msg-email" role="status"></p>
+                </div>
+                <div class="field" data-field="phone">
+                  <input id="guest-phone" name="phone" type="tel" placeholder=" " autocomplete="off" />
+                  <label for="guest-phone">Phone <em>(optional, for the boat)</em></label>
+                  <span class="f-state" aria-hidden="true"></span>
+                  <p class="f-msg" id="msg-phone" role="status"></p>
+                </div>
+                <fieldset class="field field--chips" data-field="arrival">
+                  <legend>When do you expect to arrive?</legend>
+                  <div class="chips" id="arrival-chips" role="radiogroup">
+                    <button type="button" class="chip" id="arrive-early" data-arrive="Before 4 pm" role="radio" aria-checked="false">Before 4 pm</button>
+                    <button type="button" class="chip" id="arrive-dusk" data-arrive="4 to 8 pm" role="radio" aria-checked="false">4 to 8 pm</button>
+                    <button type="button" class="chip" id="arrive-late" data-arrive="After 8 pm" role="radio" aria-checked="false">After 8 pm</button>
+                  </div>
+                  <p class="f-msg" id="msg-arrival" role="status"></p>
+                </fieldset>
+                <div class="field field--area" data-field="notes">
+                  <textarea id="guest-notes" name="notes" rows="3" maxlength="280" placeholder=" "></textarea>
+                  <label for="guest-notes">Anything we should know? <em>(allergies, occasions)</em></label>
+                  <span class="counter-n mono" id="notes-count">0 / 280</span>
+                </div>
+                <label class="check" id="terms-row" data-field="terms">
+                  <input id="guest-terms" type="checkbox" />
+                  <i class="box" aria-hidden="true"></i>
+                  <span>I understand this is a concept project and nothing is actually booked.</span>
+                </label>
+                <p class="f-msg" id="msg-terms" role="status"></p>
+                <div class="form-meter" aria-hidden="true"><i id="form-meter-fill"></i><span class="mono" id="form-meter-text">0 of 4 ready</span></div>
+              </form>
+            </section>
+
+            <!-- STEP 4 -->
+            <section class="step" id="step-4" data-step="4" hidden aria-labelledby="t4">
+              <p class="mono kicker">Last step</p>
+              <h2 class="display step-title" id="t4">Read it once, then <em>seal it.</em></h2>
+              <div class="review" id="review"></div>
+              <p class="policy">No payment today. You settle at the hotel. Free cancellation until seven days before arrival.</p>
+            </section>
+          </div>
+
+          <div class="bk-nav" id="bk-nav">
+            <button id="btn-back" class="btn btn-line" type="button"><i class="arrow arrow--back" aria-hidden="true"></i><span>Back</span></button>
+            <p class="nav-hint" id="nav-hint" role="status"></p>
+            <div class="bar-total" aria-hidden="true"><span class="mono">Total</span><b id="bar-total">&euro;0</b></div>
+            <button id="btn-next" class="btn btn-solid" type="button"><span id="btn-next-label">Continue</span><i class="arrow" aria-hidden="true"></i></button>
+            <button id="confirm-btn" class="btn btn-solid btn-seal" type="button" hidden><span>Hold my night</span><i class="arrow" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <aside class="summary" id="summary" aria-label="Your stay">
+          <div class="sum-art" id="sum-art"><div class="sum-art-empty"><span class="mono">Choose a room</span></div></div>
+          <p class="mono sum-room" id="sum-room">Your stay</p>
+          <dl class="sum-meta">
+            <div><dt class="mono">Stay</dt><dd id="sum-dates">Pick your dates</dd></div>
+            <div><dt class="mono">Guests</dt><dd id="sum-guests">2 adults</dd></div>
+          </dl>
+          <ul class="sum-lines" id="sum-lines"></ul>
+          <div class="sum-total">
+            <span class="mono">Total</span>
+            <div class="odo display" id="summary-total" aria-live="polite" aria-label="Total price">&euro;0</div>
+          </div>
+          <p class="sum-note">Pay at the hotel. Free cancellation until 7 days before.</p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- CONFIRMATION -->
+    <section id="confirmation" class="confirm" hidden aria-live="polite">
+      <canvas id="confirm-canvas" aria-hidden="true"></canvas>
+      <div class="confirm-inner">
+        <div class="seal" id="seal" aria-hidden="true">
+          <svg viewBox="0 0 240 240">
+            <defs><path id="seal-path" d="M120,120 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0" /></defs>
+            <g class="seal-ring"><text><textPath href="#seal-path">Held for you &middot; Held for you &middot; Held for you &middot; Held for you &middot;</textPath></text></g>
+            <circle class="seal-c seal-c1" cx="120" cy="120" r="74" />
+            <circle class="seal-c seal-c2" cx="120" cy="120" r="62" />
+            <path class="seal-moon" d="M124,80A42,42 0 1 0 124,160A54,54 0 0 1 124,80Z" />
+            <path class="seal-tick" d="M98,122l16,16l30,-34" />
+          </svg>
+        </div>
+        <p class="mono kicker" id="cf-kicker">Reservation held</p>
+        <h2 class="display confirm-title" id="cf-title">Your night is <em>held.</em></h2>
+        <p class="confirm-sub" id="cf-sub"></p>
+        <div class="ticket" id="ticket">
+          <div class="ticket-head"><span class="mono">Reference</span><strong class="display" id="tk-ref">AQ-0000</strong></div>
+          <dl class="ticket-grid">
+            <div><dt class="mono">Arrive</dt><dd id="tk-in"></dd></div>
+            <div><dt class="mono">Depart</dt><dd id="tk-out"></dd></div>
+            <div><dt class="mono">Room</dt><dd id="tk-room"></dd></div>
+            <div><dt class="mono">Guests</dt><dd id="tk-guests"></dd></div>
+            <div><dt class="mono">Arriving</dt><dd id="tk-arrive"></dd></div>
+            <div><dt class="mono">Total</dt><dd id="tk-total"></dd></div>
+          </dl>
+          <p class="ticket-foot mono">Concept project for a fictional brand. Nothing has been booked.</p>
+        </div>
+        <div class="confirm-actions">
+          <button id="cf-ics" class="btn btn-solid" type="button"><span>Add to calendar</span><i class="arrow" aria-hidden="true"></i></button>
+          <button id="cf-back" class="btn btn-ghost" type="button"><span>Back to Aquilune</span></button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Web Demos</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0f'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ff6a3d'/%3E%3C/svg%3E">
+<meta name="description" content="Four interactive web demos: a 3D product configurator store, a WebGL SaaS landing page, a storytelling hotel booking site and a real-time 3D dashboard. Concept projects for fictional brands.">
+<style>
+  :root {
+    --bg: #0b0b0f; --fg: #f3f1ec; --muted: #9a978f; --card: #15151b; --line: #26262e; --accent: #ff6a3d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 1180px; margin: 0 auto; padding: 72px 24px 64px; }
+  header { margin-bottom: 48px; }
+  .eyebrow { font: 500 12px/1 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.02; letter-spacing: -.03em; margin: 16px 0 16px; font-weight: 700; }
+  .lede { color: var(--muted); max-width: 620px; font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  a.card {
+    display: block; text-decoration: none; color: inherit; background: var(--card);
+    border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s;
+  }
+  a.card:hover, a.card:focus-visible { transform: translateY(-4px); border-color: #3a3a46; box-shadow: 0 24px 60px -24px rgba(0,0,0,.8); outline: none; }
+  .thumb { aspect-ratio: 16 / 9; overflow: hidden; background: #000; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+  a.card:hover .thumb img { transform: scale(1.035); }
+  .body { padding: 20px 22px 22px; }
+  .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  h2 { font-size: 21px; letter-spacing: -.01em; }
+  .tag { font: 500 11px/1 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .body p { color: var(--muted); font-size: 15px; margin-top: 8px; }
+  .open { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 600; font-size: 14px; color: var(--fg); }
+  .open span { transition: transform .3s; }
+  a.card:hover .open span { transform: translateX(4px); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+  @media (max-width: 760px) {
+    main { padding: 48px 16px 48px; }
+    .grid { grid-template-columns: 1fr; gap: 18px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Live demos</div>
+    <h1>Interactive web demos</h1>
+    <p class="lede">Four front-end builds you can click through: 3D product configuration, WebGL motion, scroll storytelling and real-time data. Best viewed on desktop; all of them work on phones too.</p>
+  </header>
+  <div class="grid">
+    <a class="card" href="./glimo/">
+      <div class="thumb"><img src="./glimo.jpg" alt="GLIMO 3D lamp configurator store" loading="lazy"></div>
+      <div class="body">
+        <div class="row"><h2>GLIMO</h2><span class="tag">React · Three.js</span></div>
+        <p>A 3D product configurator store: colours, finishes and bases change live, the lamp switches on, and checkout runs end to end.</p>
+        <div class="open">Open live demo <span>→</span></div>
+      </div>
+    </a>
+    <a class="card" href="./kaelune/">
+      <div class="thumb"><img src="./kaelune.jpg" alt="Kaelune WebGL SaaS landing page" loading="lazy"></div>
+      <div class="body">
+        <div class="row"><h2>Kaelune</h2><span class="tag">WebGL · GSAP</span></div>
+        <p>A cinematic SaaS landing page: an ink shader that follows the cursor, a 3D engine that assembles on scroll and a particle finale.</p>
+        <div class="open">Open live demo <span>→</span></div>
+      </div>
+    </a>
+    <a class="card" href="./aquilune/">
+      <div class="thumb"><img src="./aquilune.jpg" alt="Aquilune storytelling hotel booking website" loading="lazy"></div>
+      <div class="body">
+        <div class="row"><h2>Aquilune</h2><span class="tag">SVG · Scroll</span></div>
+        <p>A storytelling booking site for a boutique hotel: one long sunset, glowing water you can touch and a full booking flow.</p>
+        <div class="open">Open live demo <span>→</span></div>
+      </div>
+    </a>
+    <a class="card" href="./tarvane/">
+      <div class="thumb"><img src="./tarvane.jpg" alt="Tarvane real-time logistics dashboard with 3D globe" loading="lazy"></div>
+      <div class="body">
+        <div class="row"><h2>Tarvane</h2><span class="tag">React · D3</span></div>
+        <p>A real-time analytics dashboard: live KPIs, a 3D globe with shipping lanes, a command palette and a draggable bento grid.</p>
+        <div class="open">Open live demo <span>→</span></div>
+      </div>
+    </a>
+  </div>
+  <footer>Concept projects for fictional brands. All names, prices and data are invented; nothing is sold, booked or sent.</footer>
+</main>
+</body>
+</html>
