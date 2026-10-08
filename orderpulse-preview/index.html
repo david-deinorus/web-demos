@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OrderPulse | Direct Store Delivery software (preview)</title>
+<meta name="description" content="OrderPulse connects presell, orders, promotions, reserved stock, routes and invoicing for direct store delivery. Design preview.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#080b12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23080b12'/%3E%3Cpath d='M32 10c-8 0-14 6-14 14 0 10 14 24 14 24s14-14 14-24c0-8-6-14-14-14z' fill='%23ff6a2b'/%3E%3Ccircle cx='32' cy='24' r='5.5' fill='%23080b12'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero h1 .w>span{transform:none!important}.lit .lw{color:#fff!important}</style></noscript>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 4.5V3h6v1.5M9 11h6M9 15h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 12v8h14v-8M12 8v12M12 8c-2.5 0-4-1-4-2.5S9.5 3 12 8zm0 0c2.5 0 4-1 4-2.5S14.5 3 12 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 3l8 4.2v9.6L12 21l-8-4.2V7.2zM4 7.2l8 4.3 8-4.3M12 11.5V21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 21s5-4.6 5-9a5 5 0 0 0-10 0c0 1 .2 1.9.6 2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="11" r="1.8" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 7h7M9 12h.01M12 12h.01M15 12h.01M9 16h.01M12 16h.01M15 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10.5h18M7 15h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3.5a5.5 5.5 0 0 1-11 0zM12 17v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6l6-2.5 6 2.5 6-2.5v14.5L15 20.5 9 18l-6 2.5zM9 3.5V18M15 6v14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3-3M20 16H6l3 3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 64 64"><path d="M32 6c-9 0-16 7-16 16 0 12 16 28 16 28s16-16 16-28c0-9-7-16-16-16z" fill="currentColor"/><circle cx="32" cy="22" r="6" fill="#080b12"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview-bar" role="note"><span>PREVIEW — Deinorus Studio — not for production use</span></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="OrderPulse home"><img src="assets/logo_light.svg" alt="OrderPulse.io" width="128" height="34"></a>
+    <ul id="menu">
+      <li><a href="#problem">The problem</a></li>
+      <li><a href="#demo">Live demo</a></li>
+      <li><a href="#route">Routes</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#integrations">Integrations</a></li>
+    </ul>
+    <a class="btn sm cta-nav" href="#request">Request a demo</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="fallback"></div>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="watermark" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Direct store delivery software</span>
+      <h1 aria-label="Take the order. Hold the stock. Close the route.">
+        <span class="w" aria-hidden="true"><span style="--i:0">Take</span></span>
+        <span class="w" aria-hidden="true"><span style="--i:1">the</span></span>
+        <span class="w" aria-hidden="true"><span style="--i:2">order.</span></span><br>
+        <span class="w" aria-hidden="true"><span style="--i:3">Hold</span></span>
+        <span class="w" aria-hidden="true"><span style="--i:4">the</span></span>
+        <span class="w" aria-hidden="true"><span style="--i:5">stock.</span></span><br>
+        <span class="w" aria-hidden="true"><span class="grad" style="--i:6">Close</span></span>
+        <span class="w" aria-hidden="true"><span class="grad" style="--i:7">the</span></span>
+        <span class="w" aria-hidden="true"><span class="grad" style="--i:8">route.</span></span>
+      </h1>
+      <p class="lead">OrderPulse connects presell, promotions, reserved inventory, delivery routes and invoicing in one flow, so every stop on the route runs on the same truth.</p>
+      <div class="actions">
+        <a class="btn" href="#request">Request a demo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" href="#demo">Try the live demo</a>
+      </div>
+      <div class="chips" aria-label="Capabilities">
+        <span class="chip">Presell</span><span class="chip">Promotions</span><span class="chip">Reservations</span><span class="chip">Routes</span><span class="chip">Invoicing</span>
+      </div>
+    </div>
+
+    <div class="hero-card glass ho" id="heroCard" aria-label="Animated example of an order being built">
+      <div class="ho-head"><div><small>Sales order</small><br><b id="hoNo">SO-1042</b></div><span class="status" id="hoStatus" data-s="draft">Draft</span></div>
+      <div class="ho-cust"><span class="avatar">H</span><span><b>Harbor Market</b> <span style="color:var(--dim)">&middot; Main Warehouse</span></span></div>
+      <div class="ho-lines" id="hoLines">
+        <div class="ho-line" data-k="0"><span>Sparkling Water 12-pack</span><span class="q">x 2</span><b>$48.00</b></div>
+        <div class="ho-line gift" data-k="1"><span>Cold Brew 6-pack<span class="tag">Buy 2 Get 1</span></span><span class="q">x 1</span><b>Free</b></div>
+      </div>
+      <div class="ho-res"><i id="hoRes"></i></div>
+      <div class="ho-res-l"><span id="hoResL">Stock not reserved yet</span><span id="hoRoute"></span></div>
+      <div class="ho-foot"><span style="color:var(--muted)">Order total</span><b id="hoTotal">$48.00</b></div>
+    </div>
+  </div>
+  <div class="scrollcue" aria-hidden="true"></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Presell</span><span>Orders</span><span>Promotions</span><span>Stock reservations</span><span>Invoicing</span><span>Route sheets</span>
+    <span>Presell</span><span>Orders</span><span>Promotions</span><span>Stock reservations</span><span>Invoicing</span><span>Route sheets</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="sec problem" id="problem">
+  <div class="wrap">
+    <span class="eyebrow">The problem with route sales</span>
+    <p class="lit" id="lit">Route sales still run on phone calls, spreadsheets and memory. Orders get retyped. Promotions get misapplied. Stock is promised twice. And the invoice arrives long after the truck.</p>
+
+    <div class="bento">
+      <article class="card b1 reveal">
+        <span class="num">01</span>
+        <h3>The same order, typed three times</h3>
+        <p>Field notes become office entries, then warehouse tickets, then invoices. Every handoff is a chance for a typo.</p>
+        <div class="viz" aria-hidden="true"><div class="rt"><div class="col a"><i>2 x Water 12pk</i><i>1 x Chips case</i><i>Net 30</i></div><div class="arr">&rarr;</div><div class="col b"><i>2 x Water 12pk</i><i>11 x Chips case</i><i>Net 30</i></div></div></div>
+      </article>
+      <article class="card b2 reveal" style="--d:.08s">
+        <span class="num">02</span>
+        <h3>Stock discovered at the door</h3>
+        <p>When availability is a guess, drivers find out at the store that the pallet is gone.</p>
+        <div class="viz" aria-hidden="true"><div class="sk"><div><span>On hand</span><b></b><span>0</span></div><div><span>Promised</span><b></b><span>2x</span></div></div></div>
+      </article>
+      <article class="card b3 reveal">
+        <span class="num">03</span>
+        <h3>Promotions calculated by hand</h3>
+        <p>Buy-two-get-one, tiered discounts, customer deals: easy to promise, hard to apply the same way every time.</p>
+        <div class="viz" aria-hidden="true"><div class="pm"><span>Buy 2</span><span>+</span><span class="x">Get 1</span><span>?</span></div></div>
+      </article>
+      <article class="card b4 reveal" style="--d:.08s">
+        <span class="num">04</span>
+        <h3>Invoices that trail the truck</h3>
+        <p>Billing waits for paperwork to come back, so cash waits and disputes start from a blank page.</p>
+        <div class="viz" aria-hidden="true"><div class="lag"><div class="rail"></div><div class="truck">&#9654;</div><div class="inv">&#9993;</div><small>delivery</small></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="sec demo" id="demo">
+  <div class="wrap">
+    <div class="demo-head">
+      <div>
+        <span class="eyebrow">Live demo</span>
+        <h2>Build an order.<br>Watch the stock move.</h2>
+        <p class="lead">A simplified, interactive sketch of the sales order flow with sample data. Pick a customer, add products and take the order all the way to an invoice.</p>
+      </div>
+      <div class="autoplay">
+        <button class="btn" id="autoBtn" type="button">Watch it run <svg aria-hidden="true"><use href="#i-play"/></svg></button>
+        <button class="btn ghost" id="resetBtn" type="button">Reset <svg aria-hidden="true"><use href="#i-reset"/></svg></button>
+      </div>
+    </div>
+
+    <ol class="stepper" id="stepper" aria-label="Order progress">
+      <li>Customer</li><li>Order lines</li><li>Confirm &amp; reserve</li><li>Invoice</li>
+    </ol>
+    <div class="coach" id="coach" aria-live="polite"></div>
+
+    <div class="app" role="group" aria-label="Interactive sales order example">
+      <div class="app-chrome"><i></i><i></i><i></i><span class="url">app.example / sales / orders / new</span></div>
+      <div class="app-body">
+        <aside class="side" aria-hidden="true">
+          <div class="lg"><svg viewBox="0 0 64 64" style="color:#f65b22"><use href="#i-pin"/></svg> OrderPulse</div>
+          <small>MAIN MENU</small>
+          <a><svg><use href="#i-chart"/></svg>Dashboard</a>
+          <small>MODULES</small>
+          <a><svg><use href="#i-phone"/></svg>Customers</a>
+          <a class="cur"><svg><use href="#i-clip"/></svg>Sales</a>
+          <a><svg><use href="#i-gift"/></svg>Promotions</a>
+          <a><svg><use href="#i-box"/></svg>Fulfillment</a>
+          <a><svg><use href="#i-route"/></svg>Route</a>
+          <a><svg><use href="#i-doc"/></svg>Invoices</a>
+        </aside>
+        <div class="main" id="appMain"></div>
+      </div>
+    </div>
+    <p class="hint" style="margin-top:14px;color:var(--dim)">Sample data only. Customers, products and prices are invented for this preview.</p>
+  </div>
+</section>
+
+<!-- ROUTE -->
+<section class="sec route" id="route">
+  <div class="wrap">
+    <span class="eyebrow">Delivery routes</span>
+    <h2>Today's route,<br><span class="grad">stop by stop.</span></h2>
+    <p class="lead">Press play or drag the slider. As the truck moves, each stop changes state and the matching invoice becomes ready. Tap a stop to jump to it.</p>
+    <div class="route-grid">
+      <div>
+        <div class="mapbox">
+          <svg id="map" viewBox="0 0 900 520" role="img" aria-label="Illustrated route map with six delivery stops and a moving truck"></svg>
+          <div class="mapbar">
+            <button class="iconbtn" id="rPlay" type="button" aria-label="Play or pause route"><svg aria-hidden="true"><use href="#i-play"/></svg></button>
+            <label class="sr" for="rRange">Route progress</label>
+            <input type="range" id="rRange" min="0" max="1000" value="0">
+            <button class="iconbtn" id="rReset" type="button" aria-label="Restart route"><svg aria-hidden="true"><use href="#i-reset"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="stops" id="stops"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec features" id="features">
+  <div class="wrap">
+    <span class="eyebrow">Everything in one flow</span>
+    <h2>One system from the first tap<br>to the posted invoice.</h2>
+    <p class="lead">Each capability hands off to the next, so nothing is entered twice and nothing is promised that the warehouse cannot ship.</p>
+
+    <div class="tabs" role="tablist" aria-label="Features" id="tabs">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p0" id="t0"><svg aria-hidden="true"><use href="#i-phone"/></svg>Presell</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p1" id="t1" tabindex="-1"><svg aria-hidden="true"><use href="#i-clip"/></svg>Orders</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1"><svg aria-hidden="true"><use href="#i-gift"/></svg>Promotions</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1"><svg aria-hidden="true"><use href="#i-box"/></svg>Stock &amp; reservations</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1"><svg aria-hidden="true"><use href="#i-doc"/></svg>Invoicing</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p5" id="t5" tabindex="-1"><svg aria-hidden="true"><use href="#i-route"/></svg>Routes</button>
+    </div>
+
+    <div class="tp on" role="tabpanel" id="p0" aria-labelledby="t0">
+      <div><h3>Presell from the field, even offline</h3><p>Reps take orders at the store from a phone. Orders queue when there is no signal and sync the moment the connection returns.</p>
+        <ul><li>Customer history and price lists at hand</li><li>Available promotions shown before the order is built</li><li>Orders land in the back office as drafts, ready to confirm</li></ul></div>
+      <div class="fviz"><div class="phone"><div class="notch"></div><div class="off"></div>
+        <div class="mini" style="box-shadow:none;padding:8px;background:#f6f7fa"><h5>New order</h5><div class="row"><span>Water 12-pack</span><b>x 2</b></div><div class="row"><span>Chips case</span><b>x 1</b></div><div class="row"><span>Total</span><b>$86.00</b></div></div></div></div>
+    </div>
+
+    <div class="tp" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+      <div><h3>Orders with a clear life cycle</h3><p>Every sales order moves through simple states, from draft to confirmed to allocated, with one place to see what is waiting.</p>
+        <ul><li>Draft, confirm and allocate in a few clicks</li><li>Edit lines until the order is confirmed</li><li>Convert any order into an invoice with details prefilled</li></ul></div>
+      <div class="fviz"><div class="mini"><h5>Sales orders</h5>
+        <div class="row"><span><b>SO-1042</b><br><span style="color:#7b6f65">Harbor Market</span></span><span class="badge g">Allocated</span></div>
+        <div class="row"><span><b>SO-1041</b><br><span style="color:#7b6f65">Pine Street Deli</span></span><span class="badge b">Confirmed</span></div>
+        <div class="row"><span><b>SO-1040</b><br><span style="color:#7b6f65">Corner Fresh</span></span><span class="badge y">Draft</span></div></div></div>
+    </div>
+
+    <div class="tp" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div><h3>Promotions that apply themselves</h3><p>Define a promotion once. OrderPulse shows what a customer qualifies for and applies the right one to each line, the same way every time.</p>
+        <ul><li>Buy X get Y free, percentage and amount discounts</li><li>Clear rules for which deals combine and which do not</li><li>Free goods appear as their own line, so nothing is hidden</li></ul></div>
+      <div class="fviz"><div class="mini"><h5>Available promotions</h5>
+        <div class="row"><span><b>Buy Two, Get One</b><br><span style="color:#7b6f65">Any 2 units, 1 free item</span></span><span class="toggle" role="img" aria-label="Active"></span></div>
+        <div class="row"><span><b>Ten Percent Off</b><br><span style="color:#7b6f65">1 unit or more</span></span><span class="toggle" role="img" aria-label="Active"></span></div>
+        <div class="row"><span>Combine deals</span><span class="badge o">Not combined</span></div></div></div>
+    </div>
+
+    <div class="tp" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div><h3>Stock that is reserved, not hoped for</h3><p>Confirming an order reserves inventory automatically. If something is short, you see exactly how much before the truck leaves.</p>
+        <ul><li>Automatic reservation on confirmation</li><li>Clear shortage warnings per line</li><li>Warehouse, unit and pack handling in one view</li></ul></div>
+      <div class="fviz"><div class="mini"><h5>Reservation</h5><div class="bars">
+        <div class="br"><span>Water 12-pack</span><span class="bb"><i></i></span><b>2/2</b></div>
+        <div class="br"><span>Chips case</span><span class="bb"><i></i></span><b>1/1</b></div>
+        <div class="br"><span>Cold Brew</span><span class="bb"><i></i></span><b>1/1</b></div></div>
+        <div class="row" style="margin-top:8px"><span>Status</span><span class="badge g">Fully reserved</span></div></div></div>
+    </div>
+
+    <div class="tp" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div><h3>Invoices that start where the order ends</h3><p>Turn an allocated order into an invoice with customer, lines, promotions and terms already filled in. Review it and post.</p>
+        <ul><li>Prefilled from the sales order, no re-entry</li><li>Payment terms and due dates calculated for you</li><li>Draft first, post when you are ready</li></ul></div>
+      <div class="fviz"><div class="mini"><h5>Invoice</h5>
+        <div class="row"><b>INV-2081</b><span class="badge y">Draft</span></div>
+        <div class="row"><span>Water 12-pack x 2</span><span>$48.00</span></div>
+        <div class="row"><span>Cold Brew x 1 (free)</span><span>$0.00</span></div>
+        <div class="row"><span>Terms</span><span>Net 30</span></div>
+        <div class="row"><b>Total</b><b>$48.00</b></div></div></div>
+    </div>
+
+    <div class="tp" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+      <div><h3>Routes drivers can actually follow</h3><p>Group confirmed orders into the day's route, sequence the stops and keep office and driver looking at the same plan.</p>
+        <ul><li>Stops sequenced and shared with the driver</li><li>Orders and invoices tied to each stop</li><li>Status from loaded to delivered in one list</li></ul></div>
+      <div class="fviz"><div class="mini"><h5>Route R-07</h5>
+        <div class="row"><span><b>1</b>&nbsp; Harbor Market</span><span class="badge g">Delivered</span></div>
+        <div class="row"><span><b>2</b>&nbsp; Pine Street Deli</span><span class="badge o">Next</span></div>
+        <div class="row"><span><b>3</b>&nbsp; Corner Fresh</span><span class="badge">Queued</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="sec how" id="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Three steps. <span class="grad">One source of truth.</span></h2>
+    <div class="how-grid">
+      <div class="stage" aria-hidden="true">
+        <div class="scene on" data-scene="0">
+          <div class="ph"><div style="font-weight:700;margin-bottom:4px">New order</div>
+            <div class="ln"><span>Water 12-pack</span><b>x 2</b></div><div class="ln"><span>Chips case</span><b>x 1</b></div><div class="ln" style="background:#fff4ed;color:#a3300a"><span>Free: Cold Brew</span><b>x 1</b></div><div class="go">Create order</div></div>
+        </div>
+        <div class="scene" data-scene="1">
+          <div><div class="wh"><i class="r" style="--k:0"></i><i class="r" style="--k:1"></i><i class="r" style="--k:2"></i><i class="r" style="--k:3"></i><i></i><i></i><i class="r" style="--k:4"></i><i class="r" style="--k:5"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="wh-t">Stock reserved &middot; added to tomorrow's route</div></div>
+        </div>
+        <div class="scene" data-scene="2">
+          <div class="slip"><h5><span>Invoice</span><span style="font:600 12px var(--f-mono);color:#7b849a">INV-2081</span></h5>
+            <div class="row"><span>Water 12-pack x 2</span><span>$48.00</span></div><div class="row"><span>Chips case x 1</span><span>$38.00</span></div><div class="row"><span>Cold Brew (free)</span><span>$0.00</span></div><div class="row"><b>Total</b><b>$86.00</b></div>
+            <div style="height:46px"></div><span class="stamp">POSTED</span></div>
+        </div>
+      </div>
+      <div class="steps">
+        <article class="step on" data-step="0"><div class="big">01</div><h3>Take the order</h3><p>Reps or office staff build the order with live promotions and customer pricing. Free goods and discounts show up as the order takes shape.</p></article>
+        <article class="step" data-step="1"><div class="big">02</div><h3>Reserve and route</h3><p>Confirming reserves stock automatically and places the order on the route, so the warehouse picks what the customer was actually promised.</p></article>
+        <article class="step" data-step="2"><div class="big">03</div><h3>Deliver and invoice</h3><p>The invoice is created from the order with nothing retyped. Review, post and the loop is closed before the truck is back.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section class="sec integr" id="integrations">
+  <div class="wrap int-grid">
+    <div>
+      <span class="eyebrow">Integrations</span>
+      <h2>Plays well with the<br>systems you already run.</h2>
+      <p class="lead">OrderPulse is built to sit between the field and your back office. The exact connector list is confirmed with your team during onboarding.</p>
+      <ul class="int-list">
+        <li><svg aria-hidden="true"><use href="#i-calc"/></svg><span>Accounting and ERP<small>Keep customers, items and invoices in step</small></span></li>
+        <li><svg aria-hidden="true"><use href="#i-card"/></svg><span>Payments<small>Record what was collected at the door</small></span></li>
+        <li><svg aria-hidden="true"><use href="#i-code"/></svg><span>Open API and webhooks<small>Connect the tools only you use</small></span></li>
+      </ul>
+    </div>
+    <div class="orbit" aria-label="Diagram of integration categories around OrderPulse" role="img">
+      <div class="ring" style="--in:0"></div><div class="ring" style="--in:17%"></div>
+      <div class="core"><svg viewBox="0 0 64 64" style="color:#ff6a2b"><use href="#i-pin"/></svg></div>
+      <div class="spin" style="--t:60s">
+        <div class="node" style="--t:60s;left:50%;top:0"><i><svg><use href="#i-calc"/></svg></i>Accounting</div>
+        <div class="node" style="--t:60s;left:93.3%;top:75%"><i><svg><use href="#i-card"/></svg></i>Payments</div>
+        <div class="node" style="--t:60s;left:6.7%;top:75%"><i><svg><use href="#i-code"/></svg></i>API</div>
+      </div>
+      <div class="spin" style="--t:48s;inset:17%;animation-direction:reverse">
+        <div class="node" style="--t:48s;animation-direction:normal;left:50%;top:0"><i><svg><use href="#i-map"/></svg></i>Maps</div>
+        <div class="node" style="--t:48s;animation-direction:normal;left:93.3%;top:75%"><i><svg><use href="#i-swap"/></svg></i>EDI</div>
+        <div class="node" style="--t:48s;animation-direction:normal;left:6.7%;top:75%"><i><svg><use href="#i-chart"/></svg></i>BI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section class="sec stories" id="stories">
+  <div class="wrap">
+    <span class="eyebrow">Customer stories</span>
+    <h2>Customer stories coming soon.</h2>
+    <p class="lead">This space is reserved for real distributor stories, shared with their permission.</p>
+    <div class="sgrid">
+      <div class="sk-card"><b>Story placeholder</b><div><div class="bar"></div><div class="bar" style="margin-top:10px"></div><div class="bar" style="margin-top:10px"></div></div></div>
+      <div class="sk-card"><b>Story placeholder</b><div><div class="bar"></div><div class="bar" style="margin-top:10px"></div><div class="bar" style="margin-top:10px"></div></div></div>
+      <div class="sk-card"><b>Story placeholder</b><div><div class="bar"></div><div class="bar" style="margin-top:10px"></div><div class="bar" style="margin-top:10px"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec cta" id="request">
+  <div class="wrap cta-grid">
+    <div>
+      <span class="eyebrow">Request a demo</span>
+      <h2>See OrderPulse<br><span class="grad">on your route.</span></h2>
+      <p class="lead">Tell us about your delivery operation and we will walk you through the flow that fits it best. In this preview the form does not send anything.</p>
+    </div>
+    <div class="glass">
+      <form class="form" id="demoForm" novalidate>
+        <div class="two">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" placeholder="Alex Morgan" required></div>
+          <div class="field"><label for="f-mail">Work email</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="alex@company.com" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="f-co">Company</label><input id="f-co" name="company" autocomplete="organization" placeholder="Company name"></div>
+          <div class="field"><label for="f-size">Delivery vehicles</label><select id="f-size" name="size"><option>1 to 5</option><option>6 to 20</option><option>21 to 50</option><option>50+</option></select></div>
+        </div>
+        <div class="field"><label for="f-msg">What should we cover?</label><textarea id="f-msg" name="msg" rows="3" placeholder="Presell, promotions, routes, invoicing..."></textarea></div>
+        <button class="btn" type="submit">Request a demo <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="hint" id="formErr" role="alert" style="color:#ffb4a0;min-height:1em"></p>
+      </form>
+      <div class="done" id="formDone" role="status" tabindex="-1">
+        <div class="big-ok" aria-hidden="true">&#10003;</div>
+        <h3>This is a preview</h3>
+        <p class="lead" style="margin:0 auto">Nothing was sent or stored. In the final site this form connects to your own inbox or CRM.</p>
+        <p style="margin-top:18px"><button class="btn ghost sm" id="formAgain" type="button">Back to the form</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><img src="assets/logo_light.svg" alt="OrderPulse.io" width="136" height="36"><p style="color:var(--dim);max-width:34ch">Direct store delivery software for distributors that sell and deliver to stores.</p></div>
+      <div><h4>This page</h4><ul><li><a href="#demo">Live demo</a></li><li><a href="#route">Routes</a></li><li><a href="#features">Features</a></li><li><a href="#how">How it works</a></li></ul></div>
+      <div><h4>Coming with the full site</h4><ul><li><span class="soon">Product</span></li><li><span class="soon">Industries</span></li><li><span class="soon">Pricing</span></li><li><span class="soon">Resources</span></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#integrations">Integrations</a></li><li><a href="#stories">Customer stories</a></li><li><a href="#request">Request a demo</a></li><li><span class="soon">About</span></li></ul></div>
+    </div>
+    <div class="fbase"><span>Design preview by Deinorus Studio. Placeholder copy and sample data.</span><a href="#top">Back to top</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/scene.js"></script>
+</body>
+</html>
